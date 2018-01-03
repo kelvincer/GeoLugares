@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/mapa">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DetalleLugarActivity">
+
+        <fragment
+            android:id="@+id/mapa"
+            class="org.home.geolugares.view.WorkaroundMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/mapa"
+            android:layout_margin="8dp">
+
+            <RelativeLayout
+                android:id="@+id/rtl_name"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/nombre_lugar"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical|start"
+                    android:lines="5"
+                    android:textSize="16sp"
+                    tools:text="Provincia de Santiago Rodriguez" />
+
+                <LinearLayout
+                    android:id="@+id/lnl_pais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/nombre_pais"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:gravity="center_vertical|end"
+                        android:lines="2"
+                        tools:text="Perú" />
+
+                    <ImageView
+                        android:id="@+id/igv_pais_bandera"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        tools:src="@mipmap/ic_launcher" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lnl_clase"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/rtl_name">
+
+                <TextView
+                    android:id="@+id/label_clase"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/clase" />
+
+                <TextView
+                    android:id="@+id/txv_clase"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    tools:text="city, village,..." />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separador_uno"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryLightColor"
+                app:layout_constraintTop_toBottomOf="@id/lnl_clase" />
+
+            <LinearLayout
+                android:id="@+id/lnl_tipo_lugar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/separador_uno">
+
+                <TextView
+                    android:id="@+id/label_tipo_lugar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/tipo_de_lugar" />
+
+                <TextView
+                    android:id="@+id/txv_tipo_lugar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    tools:text="populated place" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separador_dos"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryLightColor"
+                app:layout_constraintTop_toBottomOf="@id/lnl_tipo_lugar" />
+
+            <LinearLayout
+                android:id="@+id/lnl_primer_orden"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/separador_dos">
+
+                <TextView
+                    android:id="@+id/label_primer_orden"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/divisi_n_administrativa_de_primer_orden" />
+
+                <TextView
+                    android:id="@+id/txv_primer_orden"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    tools:text="Cortés" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separador_tres"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryLightColor"
+                app:layout_constraintTop_toBottomOf="@id/lnl_primer_orden" />
+
+            <LinearLayout
+                android:id="@+id/lnl_latitud"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/separador_tres">
+
+                <TextView
+                    android:id="@+id/label_latitud"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/latitud" />
+
+                <TextView
+                    android:id="@+id/txv_latitud"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    tools:text="15.43333" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separador_cuatro"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryLightColor"
+                app:layout_constraintTop_toBottomOf="@id/lnl_latitud" />
+
+            <LinearLayout
+                android:id="@+id/lnl_longitud"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/separador_cuatro">
+
+                <TextView
+                    android:id="@+id/label_longitud"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/longitud" />
+
+                <TextView
+                    android:id="@+id/txv_longitud"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    tools:text="-87.91667" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separador_cinco"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryLightColor"
+                app:layout_constraintTop_toBottomOf="@id/lnl_longitud" />
+
+            <LinearLayout
+                android:id="@+id/lnl_codigo_pais"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/separador_cinco">
+
+                <TextView
+                    android:id="@+id/label_codigo_pais"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/codigo_pais" />
+
+                <TextView
+                    android:id="@+id/txv_codigo_pais"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    tools:text="PE" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/separador_seis"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryLightColor"
+                app:layout_constraintTop_toBottomOf="@id/lnl_codigo_pais" />
+
+            <LinearLayout
+                android:id="@+id/lnl_distancia"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@id/separador_seis">
+
+                <TextView
+                    android:id="@+id/label_distancia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/distancia_km" />
+
+                <TextView
+                    android:id="@+id/txv_distancia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_weight="1"
+                    android:text="-----"
+                    android:textSize="16sp"
+                    tools:text="100" />
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+        }
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp">
+
+        <LinearLayout
+            android:id="@+id/lnl_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/label_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre"
+                tools:text="Nombre:" />
+
+            <TextView
+                android:id="@+id/nombre_lugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:textSize="18sp"
+                tools:text="Lima" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnl_pais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/lnl_nombre">
+
+            <TextView
+                android:id="@+id/label_pais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pais" />
+
+            <TextView
+                android:id="@+id/nombre_pais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:textSize="18sp"
+                tools:text="Perú" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnl_latlng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/lnl_pais">
+
+            <LinearLayout
+                android:id="@+id/lnl_latitud"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/label_latitud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/latitud" />
+
+                <TextView
+                    android:id="@+id/latitud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:textSize="18sp"
+                    tools:text="45.89" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnl_longitud"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/longitud" />
+
+                <TextView
+                    android:id="@+id/longitud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:textSize="18sp"
+                    tools:text="34.90" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/lnl_latlng">
+
+            <TextView
+                android:id="@+id/label_clase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clase" />
+
+            <TextView
+                android:id="@+id/txv_fcl_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/longitud"
+                tools:text="Ciudad" />
+
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

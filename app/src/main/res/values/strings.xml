@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">GeoLugares</string>
+    <string name="title_activity_geoname">GeonameActivity</string>
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+    <string name="ok_button_label">OK</string>
+    <string name="conexion_internet">No tienes conexión a internet</string>
+    <string name="error_conexion">Existe algún tipo de falla en la conexión</string>
+    <string name="buscar_por_latitud_y_longitud">Buscar por latitud y longitud</string>
+    <string name="buscar_por_nombre">Buscar por nombre</string>
+    <string name="detalle_lugar">Detalle</string>
+    <string name="busqueda_nombre">Búsqueda por Nombre</string>
+    <string name="busqueda_lat_lng">Búsqueda por Lat. y Long.</string>
+    <string name="resultado_busqueda">Resultado</string>
+    <string name="clase">Clase:</string>
+    <string name="tipo_de_lugar">Tipo de lugar:</string>
+    <string name="divisi_n_administrativa_de_primer_orden">División administrativa de primer orden:</string>
+    <string name="latitud">Latitud:</string>
+    <string name="longitud">Longitud:</string>
+    <string name="codigo_pais">Código país:</string>
+    <string name="distancia_km">Distancia(Km):</string>
+    <string name="ciudad_rio_parque_montaña">Ciudad, río, parque, montaña,...</string>
+    <string name="n_de_elementos_def_100_max_1000">N° de elementos (def:100, max:1000)</string>
+    <string name="buscar">Buscar</string>
+    <string name="latitud_hint">Latitud</string>
+    <string name="longitud_hint">Longitud</string>
+    <string name="radio_def_10">Radio (def: 10)</string>
+    <string name="maximo_def_10">Máximo (def: 10)</string>
+    <string name="buscar_cerca_a_mi">Buscar cerca a mi</string>
+    <string name="distancia_m">Distancia (m):</string>
+    <string name="nombre">Nombre:</string>
+    <string name="pais">País:</string>
+    <string name="inicio">Inicio</string>
+    <string name="direccion_ruta">Dirección y Ruta</string>
+
+</resources>
